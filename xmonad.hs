@@ -77,6 +77,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) =
       ((modm, xK_z), spawn "pacmd set-default-sink 0 & pacmd move-sink-input 0 1"),
       -- pulse-audio sink setting
       ((modm, xK_x), spawn "pacmd set-default-sink 0 & pacmd move-sink-input 0 2"),
+      -- pavucontrol
+      ((modm, xK_s), spawn "pavucontrol"),
       -- close focused window
       ((modm .|. shiftMask, xK_c), kill),
       -- Rotate through the available layout algorithms

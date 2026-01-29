@@ -1,4 +1,4 @@
---
+-
 -- xmonad example config file.
 --
 -- A template showing all available configuration hooks,
@@ -248,6 +248,8 @@ myLogHook = return ()
 myStartupHook = do
   spawnOnce "nitrogen --restore &"
   spawnOnce "picom &"
+  spawnOnce "setxkbmap us"
+  spawnOnce "xmobar"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -255,7 +257,7 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-  xmproc <- spawnPipe "xmobar -x 0 /home/v0i4/.xmobarrc"
+  xmproc <- spawnPipe "xmobar -x 0 /home/antonio/.xmobarrc"
   xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
